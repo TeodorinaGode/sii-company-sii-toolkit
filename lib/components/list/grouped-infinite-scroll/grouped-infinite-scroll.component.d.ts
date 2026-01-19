@@ -1,0 +1,42 @@
+import { ElementRef, OnDestroy, EventEmitter, AfterViewInit, QueryList, ChangeDetectorRef } from '@angular/core';
+import { Subject } from 'rxjs';
+import { SiiListController } from '../../../service/sii-list-controller.service';
+import { ScrollerComponent } from '../../page-container/utils/dto/scroller-component.dto';
+import { SiiGroupedInfiniteScrollDataSource } from './utils/sii-grouped-infinite-scroll-data-source';
+import { AutoHideRowDirective } from '../utils/auto-hide-row/auto-hide-row.directive';
+import * as i0 from "@angular/core";
+export declare class GroupedInfiniteScrollComponent implements AfterViewInit, OnDestroy, ScrollerComponent {
+    el: ElementRef;
+    siiListController: SiiListController;
+    private changeDetector;
+    templateRef: any;
+    listRows: QueryList<AutoHideRowDirective>;
+    noDataFoundTpl: any;
+    multiselect: boolean;
+    selectable: boolean;
+    selectOnlyWithHandler: boolean;
+    groupListToolbarClass: any;
+    itemClick: EventEmitter<any>;
+    private subscription;
+    widthWatchInterval: any;
+    utils: {
+        lastContentWidth: number;
+        hideNotVisibleRowObserver: Subject<void>;
+        resizeObserver: Subject<void>;
+    };
+    ds: SiiGroupedInfiniteScrollDataSource;
+    listContainer: ElementRef;
+    containerObserver: any;
+    scrollerEl: Document;
+    constructor(el: ElementRef, siiListController: SiiListController, changeDetector: ChangeDetectorRef);
+    ngAfterViewInit(): void;
+    scrollerFunctionRef: (event: Event) => void;
+    isScrolledAtEndOfPage(): boolean;
+    hideNotVisibleRow(refresh?: boolean): void;
+    ngOnDestroy(): void;
+    itemClicked(item: any, ev: MouseEvent): void;
+    clickedOnMultiselectHandler: (ev: any) => boolean;
+    checkForAvailableSpaceAfterResize(): void;
+    static ɵfac: i0.ɵɵFactoryDeclaration<GroupedInfiniteScrollComponent, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<GroupedInfiniteScrollComponent, "sii-grouped-infinite-scroll", never, { "multiselect": { "alias": "multiselect"; "required": false; }; "selectable": { "alias": "selectable"; "required": false; }; "selectOnlyWithHandler": { "alias": "selectOnlyWithHandler"; "required": false; }; "groupListToolbarClass": { "alias": "groupListToolbarClass"; "required": false; }; }, { "itemClick": "itemClick"; }, ["templateRef", "noDataFoundTpl"], ["[listHeader]", "[listFooter]"], true, never>;
+}

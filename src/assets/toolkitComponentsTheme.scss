@@ -1,0 +1,341 @@
+@use '@angular/material' as mat;
+
+/* Define a mixin that accepts a theme and outputs the theme-specific styles.*/
+@mixin sii-toolkit-components-theme(
+  $dsii-app-theme,
+  $dsii-palette-primary,
+  $dsii-palette-accent,
+  $dsii-palette-background,
+  $dsii-palette-warn ,
+  $dsii-typography ,
+  $dsii-font-family,
+  $dsii-font-family-display) {
+
+
+/* matTooltip -------------*/
+mat-tooltip-component .mat-mdc-tooltip .mdc-tooltip__surface {
+  background-color: white;
+  color: black!important;
+  font-size: 17px;
+  line-height: 20px;
+  border: 1px solid black;
+  opacity: 1;
+}
+
+
+/*------INIZIO-----------SII-FEEDBACK------------------------*/
+
+  .sii-full-snackbar .mdc-snackbar__surface{
+    max-width: none!important;
+    width: 100vw;
+  }
+
+  .sii-snackbar-feedback-toast,
+  .sii-full-snackbar{
+
+    .mdc-snackbar__surface{
+      background-color: transparent!important;
+      box-shadow: none!important;
+    }
+  }
+
+  sii-snackbar-feedback{
+
+    mat-icon{
+      display: none!important;
+    }
+  }
+
+  .sii-success-feedback{
+    background-color: mat.m2-get-color-from-palette($dsii-palette-warn, 800);
+    color: mat.m2-get-contrast-color-from-palette($dsii-palette-warn, 800);
+
+    &.sii-snackbar-feedback-toast mat-icon.successIcon{
+      display: block!important;
+      margin-right: 14px;
+      color: #237e17;
+    }
+  }
+
+  .sii-error-feedback{
+    background-color: mat.m2-get-color-from-palette($dsii-palette-warn, 700);
+    color: mat.m2-get-contrast-color-from-palette($dsii-palette-warn, 700);
+
+    &.sii-snackbar-feedback-toast mat-icon.errorIcon{
+      display: block!important;
+      margin-right: 14px;
+      color: #752001;
+    }
+  }
+
+  .sii-info-feedback{
+    background-color: mat.m2-get-color-from-palette($dsii-palette-warn, 900);
+    color: mat.m2-get-contrast-color-from-palette($dsii-palette-warn, 900);
+
+    &.sii-snackbar-feedback-toast mat-icon.infoIcon{
+      display: block!important;
+      margin-right: 14px;
+      color: #427f9f;
+    }
+  }
+
+
+  .sii-success-feedback,
+  .sii-error-feedback,
+  .sii-info-feedback {
+    font-family: $dsii-font-family;
+    font-size: 12px;
+
+
+    .feedback_action_button{
+      text-transform: uppercase;
+    }
+  }
+
+
+  .sii-feedback-banner {
+
+    [feedback-action] {
+      height: 48px;
+      border-top: 1px solid lightgray;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    [feedback-body] {
+      padding: 5px;
+      min-height: 100px;
+    }
+
+
+
+      .sii-banner-toolbar{
+        height: 48px;
+        display: flex;
+        align-items: center;
+
+        mat-icon{
+          display: none;
+          padding: 14px;
+        }
+
+      }
+
+    &.sii-success-feedback-banner{
+      .sii-banner-toolbar{
+        background-color: mat.m2-get-color-from-palette($dsii-palette-warn, 800);
+        color: mat.m2-get-contrast-color-from-palette($dsii-palette-warn, 800);
+      }
+
+      mat-icon.successIcon{
+        display: block;
+        color: #237e17;
+      }
+    }
+
+    &.sii-error-feedback-banner{
+      .sii-banner-toolbar{
+        background-color: mat.m2-get-color-from-palette($dsii-palette-warn, 700);
+        color: mat.m2-get-contrast-color-from-palette($dsii-palette-warn, 700);
+      }
+      mat-icon.errorIcon{
+        display: block;
+        color: #752001;
+      }
+    }
+
+    &.sii-info-feedback-banner{
+      .sii-banner-toolbar{
+        background-color: mat.m2-get-color-from-palette($dsii-palette-warn, 900);
+        color: mat.m2-get-contrast-color-from-palette($dsii-palette-warn, 900);
+      }
+      mat-icon.infoIcon{
+        display: block;
+        color: #427f9f;
+      }
+    }
+
+  }
+/*------FINE-------------SII-FEEDBACK------------------------*/
+
+
+/*------INIZIO-----------SII-PAGE-CONTAINER------------------------*/
+  sii-page-filters{
+    // background-color: mat.get-color-from-palette($dsii-palette-primary, 800);
+    color: mat.m2-get-contrast-color-from-palette($dsii-palette-primary, 800);
+  }
+
+  // sii-page-content{
+  //   background-color: #EDEFF180;
+  // }
+
+  sii-page-content-toolbar{
+    // background-color: mat.get-color-from-palette($dsii-palette-primary, 700);
+    color: mat.m2-get-contrast-color-from-palette($dsii-palette-primary, 700);
+  }
+/*------FINE-------------SII-PAGE-CONTAINER------------------------*/
+
+/*------INIZIO-----------SII-PROFILE------------------------*/
+
+  sii-profile-button{
+      font-family: $dsii-font-family;
+      font-size: 12px;
+  }
+
+  .sii-profile-button__menu_toolbar_emailfield{
+      font-family: $dsii-font-family-display;
+      font-size: 14px;
+    line-height: 24px;
+  }
+
+  .sii-profile-button__menu_actions{
+      font-family: $dsii-font-family-display;
+      font-size: 14px;
+    line-height: 17px;
+  }
+
+
+
+/*------FINE-------------SII-PROFILE------------------------*/
+
+/*------INIZIO-----------SII-OUT------------------------*/
+
+  sii-out{
+      font-family: $dsii-font-family;
+      font-size: 14px;
+    line-height: 28px;
+
+
+    .siiOUT_label{
+      color:#212121DE;
+    }
+    .siiOUT_content{
+      color: mat.m2-get-color-from-palette($dsii-palette-primary, 500);
+    }
+
+    .sii-out-appearance-column-reverse{
+      font-family: $dsii-font-family;
+    }
+
+  }
+/*------FINE-------------SII-OUT------------------------*/
+
+
+/*------INIZIO-----------SII-BADGE------------------------*/
+sii-badge{
+  &.sii-badge-appearance-success{
+    background-color:mat.m2-get-color-from-palette($dsii-palette-warn,800);
+    color: mat.m2-get-contrast-color-from-palette($dsii-palette-warn,800);
+  }
+  &.sii-badge-appearance-error{
+    background-color:mat.m2-get-color-from-palette($dsii-palette-warn,700);
+    color: mat.m2-get-contrast-color-from-palette($dsii-palette-warn,700);
+  }
+  &.sii-badge-appearance-warning{
+    background-color:mat.m2-get-color-from-palette($dsii-palette-warn,500);
+    color: mat.m2-get-contrast-color-from-palette($dsii-palette-warn,500);
+  }
+  &.sii-badge-appearance-info{
+    background-color:mat.m2-get-color-from-palette($dsii-palette-warn,900);
+    color: mat.m2-get-contrast-color-from-palette($dsii-palette-warn,900);
+  }
+}
+/*------FINE-----------SII-BADGE------------------------*/
+
+/*------INIZIO-----------SII-FACET------------------------*/
+  sii-facets-container{
+    &[sii-spaced-facet]{
+      sii-facet{
+        .facet-basic{
+          padding: 10px 0 10px;
+       }
+     }
+     sii-facet-checkbox{
+       .facet-checkbox-item{
+        padding-bottom: 20px;
+       }
+      }
+    }
+
+    sii-facet-skeleton{
+      mat-expansion-panel-header{
+        font-family: $dsii-font-family!important;
+      }
+    }
+
+    sii-facet{
+      .facet-selected{
+        // color:mat.get-color-from-palette($dsii-palette-accent,500);
+        color:#5DA0FF;
+        sii-badge{
+          background-color:#5DA0FF!important;
+          // background-color:mat.get-color-from-palette($dsii-palette-accent,500) !important;
+          color: mat.m2-get-contrast-color-from-palette($dsii-palette-accent,500) !important;
+        }
+      }
+    }
+
+    sii-facet-checkbox{
+      .facet-selected{
+        color:#5DA0FF;
+        sii-badge{
+          background-color:#5DA0FF !important;
+          // background-color:mat.get-color-from-palette($dsii-palette-accent,500) !important;
+          color: mat.m2-get-contrast-color-from-palette($dsii-palette-accent,500) !important;
+        }
+      }
+    }
+
+
+
+
+  }
+
+  .sii-facet-search-selected{
+    color:mat.m2-get-color-from-palette($dsii-palette-accent,500)!important;
+  }
+/*------FINE-----------SII-FACET------------------------*/
+/*------INIZIO-----------SII-TOOLBAR------------------------*/
+  sii-toolbar{
+    background: mat.m2-get-color-from-palette($dsii-palette-primary, 900);
+  }
+/*------FINE-----------SII-TOOLBAR------------------------*/
+
+
+
+
+.sii-infinite-scroll-selected{
+
+  .list-ico-selected{
+    display: block!important;
+  }
+
+  .list-ico-unselected{
+    display: none!important;
+  }
+}
+
+.siiUploadPreviewImage{
+  max-width: 80vw!important;
+}
+
+.siiAppLoader{
+  background-color: mat.m2-get-color-from-palette($dsii-palette-primary, 900);
+  border-radius: 50%;
+  margin-left: calc(50vw - 50px);
+  margin-top: calc(50vh - 50px);
+  padding: 10px;
+  animation: rotation 2s infinite linear;
+  min-height: 72px;
+  min-width: 72px;
+  position: absolute;
+}
+@keyframes rotation {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(359deg);
+  }
+}
+}

@@ -1,0 +1,62 @@
+<svg>
+    <defs>
+
+        <!-- toolkit icons -->
+        <!-- <g id="sii-expander-icon-down">  <path fill="#707070" d="M22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2A10,10 0 0,1 22,12M20,12A8,8 0 0,0 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12M6,10L12,16L18,10L16.6,8.6L12,13.2L7.4,8.6L6,10Z" /></g>
+        <g id="sii-expander-icon-up">  <path fill="#707070" d="M22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2A10,10 0 0,1 22,12M20,12A8,8 0 0,0 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12M7.4,15.4L12,10.8L16.6,15.4L18,14L12,8L6,14L7.4,15.4Z" /></g>
+        <g id="sii-delete">    <path fill="#707070" d="M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2C6.47,2 2,6.47 2,12C2,17.53 6.47,22 12,22C17.53,22 22,17.53 22,12C22,6.47 17.53,2 12,2M14.59,8L12,10.59L9.41,8L8,9.41L10.59,12L8,14.59L9.41,16L12,13.41L14.59,16L16,14.59L13.41,12L16,9.41L14.59,8Z" /></g>
+        <g id="sii-edit">      <path fill="#707070" d="M14.06,9L15,9.94L5.92,19H5V18.08L14.06,9M17.66,3C17.41,3 17.15,3.1 16.96,3.29L15.13,5.12L18.88,8.87L20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18.17,3.09 17.92,3 17.66,3M14.06,6.19L3,17.25V21H6.75L17.81,9.94L14.06,6.19Z" /></g>
+        <g id="sii-copy">      <path fill="#707070" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z" /></g>
+        <g id="sii-approved"> <path fill="#88c500" d="M10,17L5,12L6.41,10.58L10,14.17L17.59,6.58L19,8M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z" /></g>
+        <g id="sii-rejected">   <path fill="#c51b88" d="M12,2C17.53,2 22,6.47 22,12C22,17.53 17.53,22 12,22C6.47,22 2,17.53 2,12C2,6.47 6.47,2 12,2M15.59,7L12,10.59L8.41,7L7,8.41L10.59,12L7,15.59L8.41,17L12,13.41L15.59,17L17,15.59L13.41,12L17,8.41L15.59,7Z" /></g>
+        <g id="sii-add">   <path fill="#707070" d="M17,14H19V17H22V19H19V22H17V19H14V17H17V14M11,16L2,9L11,2L20,9L11,16M11,18.54L12,17.75V18C12,18.71 12.12,19.39 12.35,20L11,21.07L2,14.07L3.62,12.81L11,18.54Z" /></g> -->
+        <g id="sii-help-online">   <path  d="M11,18H13V16H11V18M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,6A4,4 0 0,0 8,10H10A2,2 0 0,1 12,8A2,2 0 0,1 14,10C14,12 11,11.75 11,15H13C13,12.75 16,12.5 16,10A4,4 0 0,0 12,6Z" /></g>
+        <g id="sii-feedback-success"><path  d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z" /></g>
+        <g id="sii-feedback-error"><path  d="M12,2A10,10,0,1,0,22,12,10,10,0,0,0,12,2Zm0,18a8,8,0,0,1-8-8A7.9,7.9,0,0,1,5.69,7.1L16.9,18.31A7.9,7.9,0,0,1,12,20Zm6.31-3.1L7.1,5.69A7.9,7.9,0,0,1,12,4a8,8,0,0,1,8,8A7.9,7.9,0,0,1,18.31,16.9Z" /></g>
+        <g id="sii-feedback-info"> <path d="M13,9H11V7H13M13,17H11V11H13M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z" /></g>
+
+
+
+
+        <g id="sii-hide-filters">
+         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="14 15 20 19">
+         <defs><style>.a{fill:none;}</style></defs><path class="a" d="M0,0H48V48H0Z"/>
+         <g transform="translate(-456 -995)">
+         <path d="M483.5,1017.2l3.2-3.5a.967.967,0,0,0,0-1.4.908.908,0,0,0-.7-.3H471a1,1,0,0,0-1,1,.908.908,0,0,0,.3.7l5.7,6.3v4.9a1.231,1.231,0,0,0,.5,1l2.5,1.9a1.248,1.248,0,0,0,1.7-.2c0-.1.1-.1.1-.2a5.911,5.911,0,0,1-1.9-4.3A6.234,6.234,0,0,1,483.5,1017.2Z"/>
+         <path d="M485,1028.1a4.8,4.8,0,0,0,4.8-4.8h0a4.8,4.8,0,0,0-4.8-4.8h0a4.8,4.8,0,0,0-4.8,4.8h0a4.8,4.8,0,0,0,4.8,4.8Zm-2.2-4.5a.483.483,0,0,1,0-.7h0l2.6-2.6a.483.483,0,0,1,.7,0h0l.3.3a.483.483,0,0,1,0,.7h0l-2,2,2,2a.483.483,0,0,1,0,.7h0l-.3.3a.483.483,0,0,1-.7,0h0Z"/></g></svg>
+        </g>
+
+
+        <g id="sii-show-filters" transform="translate(-2 -3) scale(1.2 1.2)">
+          <path transform="translate(4 18)" d="M15.249-14H.751a.751.751,0,0,0-.53,1.28L6-6.939V-.5a.75.75,0,0,0,.32.614l2.5,1.749A.75.75,0,0,0,10,1.249V-6.939l5.78-5.78A.751.751,0,0,0,15.249-14Z" />
+        </g>
+
+
+        <g id="sii-sort-asc"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48"><defs><style>.a{fill:none;}</style></defs><path class="a" d="M0,0H48V48H0Z"/><g ><path d="M3,18H9V16H3ZM3,6V8H21V6Zm0,7H15V11H3Z"/><path class="a" d="M0,0H24V24H0Z"/></g></svg></g>
+        <g id="sii-sort-desc"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48"> <defs><style>.a{fill:none;}</style></defs><path class="a" d="M0,0H48V48H0Z"/><g><path d="M3,6H9V8H3ZM3,18V16H21v2Zm0-7H15v2H3Z"/><path class="a" d="M0,24H24V0H0Z"/></g></svg></g>
+        <g id="sii-sort"><path   d="M3 18h6v-2H3v2zM3 6v2h18V6H3zm0 7h12v-2H3v2z" /></g>
+        <g id="sii-company"><path d="M18,15H16V17H18M18,11H16V13H18M20,19H12V17H14V15H12V13H14V11H12V9H20M10,7H8V5H10M10,11H8V9H10M10,15H8V13H10M10,19H8V17H10M6,7H4V5H6M6,11H4V9H6M6,15H4V13H6M6,19H4V17H6M12,7V3H2V21H22V7H12Z" /></g>
+
+        <!-- menu icons -->
+        <g id="application"><path  d="M19,4C20.11,4 21,4.9 21,6V18A2,2 0 0,1 19,20H5C3.89,20 3,19.1 3,18V6A2,2 0 0,1 5,4H19M19,18V8H5V18H19Z" /></g>
+        <g id="tram"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><defs><style>.a{fill:none;}</style></defs> <rect class="a" width="24" height="24"/><g transform="translate(1.84 3.57)"><path d="M2.5,19h19v2H2.5ZM22.07,9.64a1.5,1.5,0,0,0-1.84-1.06L14.92,10,8.02,3.57l-1.93.51,4.14,7.17L5.26,12.58,3.29,11.04l-1.45.39,2.59,4.49s7.12-1.9,16.57-4.43A1.522,1.522,0,0,0,22.07,9.64Z" transform="translate(-1.84 -3.57)"/></g> </svg> </g>
+        <g id="orme"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><defs><style>.b{fill:none;}</style></defs><circle  cx="2.5" cy="2.5" r="2.5" transform="translate(2 7)"/><circle  cx="2.5" cy="2.5" r="2.5" transform="translate(6.5 3)"/><circle  cx="2.5" cy="2.5" r="2.5" transform="translate(12.5 3)"/><circle  cx="2.5" cy="2.5" r="2.5" transform="translate(17 7)"/><path  d="M17.34,14.86c-.87-1.02-1.6-1.89-2.48-2.91a4.243,4.243,0,0,0-1.75-1.32,2.025,2.025,0,0,0-.33-.09A5.033,5.033,0,0,0,12,10.5a4.2,4.2,0,0,0-.79.05,2.025,2.025,0,0,0-.33.09,4.308,4.308,0,0,0-1.75,1.32c-.87,1.02-1.6,1.89-2.48,2.91-1.31,1.31-2.92,2.76-2.62,4.79a3.14,3.14,0,0,0,2.33,2.32c.73.15,3.06-.44,5.54-.44h.18c2.48,0,4.81.58,5.54.44a3.155,3.155,0,0,0,2.33-2.32c.31-2.04-1.3-3.49-2.61-4.8Z"/><path class="b" d="M0,0H24V24H0Z"/></svg></g>
+        <g id="lavoratori_esterni"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><defs><style>.a{fill:none;}</style></defs><path class="a" d="M0,0H24V24H0Z"/><path  d="M16.5,12A2.5,2.5,0,1,0,14,9.5,2.492,2.492,0,0,0,16.5,12ZM9,11A3,3,0,1,0,6,8,2.987,2.987,0,0,0,9,11Zm7.5,3c-1.83,0-5.5.92-5.5,2.75V19H22V16.75C22,14.92,18.33,14,16.5,14ZM9,13c-2.33,0-7,1.17-7,3.5V19H9V16.75a3.941,3.941,0,0,1,2.37-3.47A12.283,12.283,0,0,0,9,13Z"/></svg></g>
+        <g id="altri_applicativi"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><defs><style>.b{fill:none;}</style></defs><path  d="M4,8H8V4H4Zm6,12h4V16H10ZM4,20H8V16H4Zm0-6H8V10H4Zm6,0h4V10H10ZM16,4V8h4V4ZM10,8h4V4H10Zm6,6h4V10H16Zm0,6h4V16H16Z"/><path class="b" d="M0,0H24V24H0Z"/></svg></g>
+        <g id="cdc"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><defs><style>.a{fill:none;}</style></defs><path class="a" d="M0,0H24V24H0Z"/><path  d="M22,11V3H15V6H9V3H2v8H9V8h2V18h4v3h7V13H15v3H13V8h2v3Z"/></svg></g>
+        <g id="preferenze"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><defs><style>.a{fill:none;}</style></defs><path class="a" d="M0,0H24V24H0Z"/><path  d="M22.7,19,13.6,9.9A6.418,6.418,0,0,0,12.1,3,6.611,6.611,0,0,0,4.7,1.7L9,6,6,9,1.6,4.7a6.445,6.445,0,0,0,1.3,7.4,6.418,6.418,0,0,0,6.9,1.5l9.1,9.1a.967.967,0,0,0,1.4,0l2.3-2.3a.9.9,0,0,0,.1-1.4Z"/></svg></g>
+        <g id="report"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><defs><style>.a{fill:none;}</style></defs><path class="a" d="M0,0H24V24H0Z"/><path  d="M10,10.02h5V21H10ZM17,21h3a2.006,2.006,0,0,0,2-2V10H17ZM20,3H5A2.006,2.006,0,0,0,3,5V8H22V5A2.006,2.006,0,0,0,20,3ZM3,19a2.006,2.006,0,0,0,2,2H8V10H3Z"/></svg></g>
+        <g id="vendite"><path  d="M16,11.78L20.24,4.45L21.97,5.45L16.74,14.5L10.23,10.75L5.46,19H22V21H2V3H4V17.54L9.5,8L16,11.78Z" /></g>
+        <g id="utility"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><defs><style>.a{fill:none;}</style></defs><path class="a" d="M0,0H24V24H0Z"/><path  d="M3,17v2H9V17ZM3,5V7H13V5ZM13,21V19h8V17H13V15H11v6ZM7,9v2H3v2H7v2H9V9Zm14,4V11H11v2ZM15,9h2V7h4V5H17V3H15Z"/></svg></g>
+        <g id="acquisti"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><defs><style>.a{fill:none;}</style></defs><path class="a" d="M0,0H24V24H0Z"/><path  d="M19,6H17A5,5,0,0,0,7,6H5A2,2,0,0,0,3.01,8L3,20a2.006,2.006,0,0,0,2,2H19a2.006,2.006,0,0,0,2-2V8A2.006,2.006,0,0,0,19,6ZM12,3a3,3,0,0,1,3,3H9A3,3,0,0,1,12,3Zm0,10A5,5,0,0,1,7,8H9a3,3,0,0,0,6,0h2A5,5,0,0,1,12,13Z"/></svg></g>
+        <g id="lavoratori_dipendenti"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><defs><style>.b{fill:none;}</style></defs><path  d="M11.99,2a10,10,0,1,0,10,10A10,10,0,0,0,11.99,2ZM15.6,8.34a1.93,1.93,0,1,1-1.93,1.93A1.925,1.925,0,0,1,15.6,8.34Zm-6-1.58A2.36,2.36,0,1,1,7.24,9.12,2.364,2.364,0,0,1,9.6,6.76Zm0,9.13v3.75a8.007,8.007,0,0,1-5.14-4.96c1.05-1.12,3.67-1.69,5.14-1.69a10.172,10.172,0,0,1,1.9.22A3.022,3.022,0,0,0,9.6,15.89ZM11.99,20a6.851,6.851,0,0,1-.79-.04V15.89c0-1.42,2.94-2.13,4.4-2.13a7.089,7.089,0,0,1,3.84,1.15A8.019,8.019,0,0,1,11.99,20Z"/><path class="b" d="M0,0H24V24H0Z"/></svg></g>
+        <g id="commesse"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><defs><style>.a{fill:none;}</style></defs><path class="a" d="M0,0H24V24H0Z"/><path d="M5,8H7v8H5Zm7,0H9A1,1,0,0,0,8,9v6a1,1,0,0,0,1,1h3a1,1,0,0,0,1-1V9A1,1,0,0,0,12,8Zm-1,6H10V10h1Zm7-6H15a1,1,0,0,0-1,1v6a1,1,0,0,0,1,1h3a1,1,0,0,0,1-1V9A1,1,0,0,0,18,8Zm-1,6H16V10h1Z"/><path class="a" d="M4,6H20V18H4Z"/><path d="M2,4V20H22V4ZM4,18V6H20V18Z"/></svg></g>
+        <g id="moduli"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><defs><style>.a{fill:none;}</style></defs><path class="a" d="M0,0H24V24H0Z"/><path  d="M19,3H14.82A2.988,2.988,0,0,0,9.18,3H5A2.006,2.006,0,0,0,3,5V19a2.006,2.006,0,0,0,2,2H19a2.006,2.006,0,0,0,2-2V5A2.006,2.006,0,0,0,19,3ZM12,3a1,1,0,1,1-1,1A1,1,0,0,1,12,3Zm0,4a3,3,0,1,1-3,3A3,3,0,0,1,12,7Zm6,12H6V17.6c0-2,4-3.1,6-3.1s6,1.1,6,3.1Z"/></svg></g>
+        <g id="scuola"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><defs><style>.a{fill:none;}</style></defs><path class="a" d="M0,0H24V24H0Z"/><path  d="M5,13.18v4L12,21l7-3.82v-4L12,17ZM12,3,1,9l11,6,9-4.91V17h2V9Z"/></svg></g>
+
+        <!-- fine menu icons -->
+
+        <g id="file_download"> <path  d="M14,2L20,8V20A2,2 0 0,1 18,22H6A2,2 0 0,1 4,20V4A2,2 0 0,1 6,2H14M18,20V9H13V4H6V20H18M12,19L8,15H10.5V12H13.5V15H16L12,19Z" /></g>
+
+    </defs>
+</svg>

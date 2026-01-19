@@ -1,0 +1,20 @@
+import { Component } from '@angular/core';
+import { AsyncPipe } from '@angular/common';
+import { MatProgressSpinner } from '@angular/material/progress-spinner';
+import * as i0 from "@angular/core";
+import * as i1 from "./sii-wait.service";
+export class WaitComponent {
+    constructor(wait) {
+        this.wait = wait;
+    }
+    ngOnInit() {
+        this.display$ = this.wait.display$;
+    }
+    static { this.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "18.2.13", ngImport: i0, type: WaitComponent, deps: [{ token: i1.SiiWaitService }], target: i0.ɵɵFactoryTarget.Component }); }
+    static { this.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "17.0.0", version: "18.2.13", type: WaitComponent, isStandalone: true, selector: "sii-wait", ngImport: i0, template: "@if (display$ | async) {\r\n  <div class=\"sii-wait-screen\">\r\n    <mat-spinner ></mat-spinner>\r\n  </div>\r\n}\r\n", styles: [".sii-wait-screen{z-index:1001;border:0;margin:0;padding:0;height:100%;width:100%;top:0;left:0;position:fixed;background-color:#0000001a;align-items:center;justify-content:center;display:flex}\n"], dependencies: [{ kind: "component", type: MatProgressSpinner, selector: "mat-progress-spinner, mat-spinner", inputs: ["color", "mode", "value", "diameter", "strokeWidth"], exportAs: ["matProgressSpinner"] }, { kind: "pipe", type: AsyncPipe, name: "async" }] }); }
+}
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "18.2.13", ngImport: i0, type: WaitComponent, decorators: [{
+            type: Component,
+            args: [{ selector: 'sii-wait', standalone: true, imports: [MatProgressSpinner, AsyncPipe], template: "@if (display$ | async) {\r\n  <div class=\"sii-wait-screen\">\r\n    <mat-spinner ></mat-spinner>\r\n  </div>\r\n}\r\n", styles: [".sii-wait-screen{z-index:1001;border:0;margin:0;padding:0;height:100%;width:100%;top:0;left:0;position:fixed;background-color:#0000001a;align-items:center;justify-content:center;display:flex}\n"] }]
+        }], ctorParameters: () => [{ type: i1.SiiWaitService }] });
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoid2FpdC5jb21wb25lbnQuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi8uLi8uLi8uLi8uLi9wcm9qZWN0cy9zaWktdG9vbGtpdC9zcmMvbGliL2NvbXBvbmVudHMvd2FpdC93YWl0LmNvbXBvbmVudC50cyIsIi4uLy4uLy4uLy4uLy4uLy4uL3Byb2plY3RzL3NpaS10b29sa2l0L3NyYy9saWIvY29tcG9uZW50cy93YWl0L3dhaXQuY29tcG9uZW50Lmh0bWwiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsT0FBTyxFQUFFLFNBQVMsRUFBVSxNQUFNLGVBQWUsQ0FBQztBQUdsRCxPQUFPLEVBQUUsU0FBUyxFQUFFLE1BQU0saUJBQWlCLENBQUM7QUFDNUMsT0FBTyxFQUFFLGtCQUFrQixFQUFFLE1BQU0sb0NBQW9DLENBQUM7OztBQVN4RSxNQUFNLE9BQU8sYUFBYTtJQUd4QixZQUFvQixJQUFvQjtRQUFwQixTQUFJLEdBQUosSUFBSSxDQUFnQjtJQUFJLENBQUM7SUFFN0MsUUFBUTtRQUNOLElBQUksQ0FBQyxRQUFRLEdBQUcsSUFBSSxDQUFDLElBQUksQ0FBQyxRQUFRLENBQUM7SUFDckMsQ0FBQzsrR0FQVSxhQUFhO21HQUFiLGFBQWEsb0VDYjFCLHdIQUtBLDJQRE1jLGtCQUFrQiwwS0FBRSxTQUFTOzs0RkFFOUIsYUFBYTtrQkFQekIsU0FBUzsrQkFDSSxVQUFVLGNBR1IsSUFBSSxXQUNQLENBQUMsa0JBQWtCLEVBQUUsU0FBUyxDQUFDIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgQ29tcG9uZW50LCBPbkluaXQgfSBmcm9tICdAYW5ndWxhci9jb3JlJztcclxuaW1wb3J0IHsgT2JzZXJ2YWJsZSB9IGZyb20gJ3J4anMnO1xyXG5pbXBvcnQgeyBTaWlXYWl0U2VydmljZSB9IGZyb20gJy4vc2lpLXdhaXQuc2VydmljZSc7XHJcbmltcG9ydCB7IEFzeW5jUGlwZSB9IGZyb20gJ0Bhbmd1bGFyL2NvbW1vbic7XHJcbmltcG9ydCB7IE1hdFByb2dyZXNzU3Bpbm5lciB9IGZyb20gJ0Bhbmd1bGFyL21hdGVyaWFsL3Byb2dyZXNzLXNwaW5uZXInO1xyXG5cclxuQENvbXBvbmVudCh7XHJcbiAgICBzZWxlY3RvcjogJ3NpaS13YWl0JyxcclxuICAgIHRlbXBsYXRlVXJsOiAnLi93YWl0LmNvbXBvbmVudC5odG1sJyxcclxuICAgIHN0eWxlVXJsczogWycuL3dhaXQuY29tcG9uZW50LmNzcyddLFxyXG4gICAgc3RhbmRhbG9uZTogdHJ1ZSxcclxuICAgIGltcG9ydHM6IFtNYXRQcm9ncmVzc1NwaW5uZXIsIEFzeW5jUGlwZV1cclxufSlcclxuZXhwb3J0IGNsYXNzIFdhaXRDb21wb25lbnQgaW1wbGVtZW50cyBPbkluaXQge1xyXG5cclxuICBkaXNwbGF5JDogT2JzZXJ2YWJsZTxib29sZWFuPjtcclxuICBjb25zdHJ1Y3Rvcihwcml2YXRlIHdhaXQ6IFNpaVdhaXRTZXJ2aWNlKSB7IH1cclxuXHJcbiAgbmdPbkluaXQoKSB7XHJcbiAgICB0aGlzLmRpc3BsYXkkID0gdGhpcy53YWl0LmRpc3BsYXkkO1xyXG4gIH1cclxuXHJcbn1cclxuIiwiQGlmIChkaXNwbGF5JCB8IGFzeW5jKSB7XHJcbiAgPGRpdiBjbGFzcz1cInNpaS13YWl0LXNjcmVlblwiPlxyXG4gICAgPG1hdC1zcGlubmVyID48L21hdC1zcGlubmVyPlxyXG4gIDwvZGl2PlxyXG59XHJcbiJdfQ==

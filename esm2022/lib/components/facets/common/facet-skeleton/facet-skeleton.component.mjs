@@ -1,0 +1,40 @@
+import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { MatExpansionPanel, MatExpansionPanelHeader } from '@angular/material/expansion';
+import * as i0 from "@angular/core";
+export class FacetSkeletonComponent {
+    constructor() {
+        this.expanded = true;
+        this.expandedChange = new EventEmitter();
+        this.initalized = false;
+    }
+    ngAfterViewInit() {
+        Promise.resolve().then(() => {
+            // this is necessary to resolve the problem of flicking on reload
+            this.initalized = true;
+        });
+    }
+    ngOnInit() {
+    }
+    setLabel(label) {
+        Promise.resolve().then(() => this.label = label);
+    }
+    setExpanded(expanded) {
+        Promise.resolve().then(() => this.expanded = expanded);
+    }
+    expChange(ev) {
+        this.expandedChange.next(ev);
+    }
+    static { this.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "18.2.13", ngImport: i0, type: FacetSkeletonComponent, deps: [], target: i0.ɵɵFactoryTarget.Component }); }
+    static { this.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "17.0.0", version: "18.2.13", type: FacetSkeletonComponent, isStandalone: true, selector: "sii-facet-skeleton", inputs: { expanded: "expanded", label: "label" }, outputs: { expandedChange: "expandedChange" }, ngImport: i0, template: "@if (initalized) {\r\n  <mat-expansion-panel [expanded]=\"expanded\" (expandedChange)=\"expChange($event)\">\r\n    <mat-expansion-panel-header>\r\n      {{label}}\r\n    </mat-expansion-panel-header>\r\n    <ng-content select=\"sii-facet-search\"></ng-content>\r\n    <div class=\"skelCont\">\r\n      <ng-content></ng-content>\r\n    </div>\r\n    <ng-content select=\"sii-facet-paginator\"></ng-content>\r\n  </mat-expansion-panel>\r\n}\r\n", styles: ["mat-expansion-panel{background-color:transparent;box-shadow:none!important;padding-bottom:10px}.mat-expansion-panel,:host ::ng-deep .mat-expansion-indicator:after{color:#fff!important}mat-expansion-panel-header{font-size:15px;line-height:20px;letter-spacing:.3px;padding:0 5px 0 0;text-transform:capitalize;font-weight:600;max-height:30px}:host ::ng-deep .mat-expansion-panel-body{padding:0 2px!important}\n"], dependencies: [{ kind: "component", type: MatExpansionPanel, selector: "mat-expansion-panel", inputs: ["hideToggle", "togglePosition"], outputs: ["afterExpand", "afterCollapse"], exportAs: ["matExpansionPanel"] }, { kind: "component", type: MatExpansionPanelHeader, selector: "mat-expansion-panel-header", inputs: ["expandedHeight", "collapsedHeight", "tabIndex"] }] }); }
+}
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "18.2.13", ngImport: i0, type: FacetSkeletonComponent, decorators: [{
+            type: Component,
+            args: [{ selector: 'sii-facet-skeleton', standalone: true, imports: [MatExpansionPanel, MatExpansionPanelHeader], template: "@if (initalized) {\r\n  <mat-expansion-panel [expanded]=\"expanded\" (expandedChange)=\"expChange($event)\">\r\n    <mat-expansion-panel-header>\r\n      {{label}}\r\n    </mat-expansion-panel-header>\r\n    <ng-content select=\"sii-facet-search\"></ng-content>\r\n    <div class=\"skelCont\">\r\n      <ng-content></ng-content>\r\n    </div>\r\n    <ng-content select=\"sii-facet-paginator\"></ng-content>\r\n  </mat-expansion-panel>\r\n}\r\n", styles: ["mat-expansion-panel{background-color:transparent;box-shadow:none!important;padding-bottom:10px}.mat-expansion-panel,:host ::ng-deep .mat-expansion-indicator:after{color:#fff!important}mat-expansion-panel-header{font-size:15px;line-height:20px;letter-spacing:.3px;padding:0 5px 0 0;text-transform:capitalize;font-weight:600;max-height:30px}:host ::ng-deep .mat-expansion-panel-body{padding:0 2px!important}\n"] }]
+        }], ctorParameters: () => [], propDecorators: { expanded: [{
+                type: Input
+            }], expandedChange: [{
+                type: Output
+            }], label: [{
+                type: Input
+            }] } });
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZmFjZXQtc2tlbGV0b24uY29tcG9uZW50LmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vcHJvamVjdHMvc2lpLXRvb2xraXQvc3JjL2xpYi9jb21wb25lbnRzL2ZhY2V0cy9jb21tb24vZmFjZXQtc2tlbGV0b24vZmFjZXQtc2tlbGV0b24uY29tcG9uZW50LnRzIiwiLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vcHJvamVjdHMvc2lpLXRvb2xraXQvc3JjL2xpYi9jb21wb25lbnRzL2ZhY2V0cy9jb21tb24vZmFjZXQtc2tlbGV0b24vZmFjZXQtc2tlbGV0b24uY29tcG9uZW50Lmh0bWwiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsT0FBTyxFQUFFLFNBQVMsRUFBVSxLQUFLLEVBQUUsTUFBTSxFQUFFLFlBQVksRUFBaUIsTUFBTSxlQUFlLENBQUM7QUFDOUYsT0FBTyxFQUFFLGlCQUFpQixFQUFFLHVCQUF1QixFQUFFLE1BQU0sNkJBQTZCLENBQUM7O0FBU3pGLE1BQU0sT0FBTyxzQkFBc0I7SUFNakM7UUFMUyxhQUFRLEdBQUMsSUFBSSxDQUFDO1FBQ2IsbUJBQWMsR0FBRyxJQUFJLFlBQVksRUFBRSxDQUFDO1FBRTlDLGVBQVUsR0FBQyxLQUFLLENBQUM7SUFFRCxDQUFDO0lBQ2pCLGVBQWU7UUFDYixPQUFPLENBQUMsT0FBTyxFQUFFLENBQUMsSUFBSSxDQUFDLEdBQUcsRUFBRTtZQUMxQixpRUFBaUU7WUFDakUsSUFBSSxDQUFDLFVBQVUsR0FBQyxJQUFJLENBQUM7UUFFdkIsQ0FBQyxDQUFDLENBQUM7SUFDTCxDQUFDO0lBRUQsUUFBUTtJQUNSLENBQUM7SUFFTSxRQUFRLENBQUMsS0FBWTtRQUMxQixPQUFPLENBQUMsT0FBTyxFQUFFLENBQUMsSUFBSSxDQUFDLEdBQUcsRUFBRSxDQUFBLElBQUksQ0FBQyxLQUFLLEdBQUMsS0FBSyxDQUFDLENBQUM7SUFDaEQsQ0FBQztJQUVNLFdBQVcsQ0FBQyxRQUFnQjtRQUMvQixPQUFPLENBQUMsT0FBTyxFQUFFLENBQUMsSUFBSSxDQUFDLEdBQUcsRUFBRSxDQUFBLElBQUksQ0FBQyxRQUFRLEdBQUMsUUFBUSxDQUFDLENBQUM7SUFDeEQsQ0FBQztJQUVELFNBQVMsQ0FBQyxFQUFFO1FBQ1YsSUFBSSxDQUFDLGNBQWMsQ0FBQyxJQUFJLENBQUMsRUFBRSxDQUFDLENBQUE7SUFDOUIsQ0FBQzsrR0E1QlUsc0JBQXNCO21HQUF0QixzQkFBc0IsK0tDVm5DLDZiQVlBLGlkREpjLGlCQUFpQixzTEFBRSx1QkFBdUI7OzRGQUUzQyxzQkFBc0I7a0JBUGxDLFNBQVM7K0JBQ0ksb0JBQW9CLGNBR2xCLElBQUksV0FDUCxDQUFDLGlCQUFpQixFQUFFLHVCQUF1QixDQUFDO3dEQUc5QyxRQUFRO3NCQUFoQixLQUFLO2dCQUNJLGNBQWM7c0JBQXZCLE1BQU07Z0JBQ0UsS0FBSztzQkFBYixLQUFLIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgQ29tcG9uZW50LCBPbkluaXQsIElucHV0LCBPdXRwdXQsIEV2ZW50RW1pdHRlciwgQWZ0ZXJWaWV3SW5pdCB9IGZyb20gJ0Bhbmd1bGFyL2NvcmUnO1xyXG5pbXBvcnQgeyBNYXRFeHBhbnNpb25QYW5lbCwgTWF0RXhwYW5zaW9uUGFuZWxIZWFkZXIgfSBmcm9tICdAYW5ndWxhci9tYXRlcmlhbC9leHBhbnNpb24nO1xyXG5cclxuQENvbXBvbmVudCh7XHJcbiAgICBzZWxlY3RvcjogJ3NpaS1mYWNldC1za2VsZXRvbicsXHJcbiAgICB0ZW1wbGF0ZVVybDogJy4vZmFjZXQtc2tlbGV0b24uY29tcG9uZW50Lmh0bWwnLFxyXG4gICAgc3R5bGVVcmxzOiBbJy4vZmFjZXQtc2tlbGV0b24uY29tcG9uZW50LnNjc3MnXSxcclxuICAgIHN0YW5kYWxvbmU6IHRydWUsXHJcbiAgICBpbXBvcnRzOiBbTWF0RXhwYW5zaW9uUGFuZWwsIE1hdEV4cGFuc2lvblBhbmVsSGVhZGVyXVxyXG59KVxyXG5leHBvcnQgY2xhc3MgRmFjZXRTa2VsZXRvbkNvbXBvbmVudCBpbXBsZW1lbnRzIE9uSW5pdCAsIEFmdGVyVmlld0luaXR7XHJcbiAgQElucHV0KCkgZXhwYW5kZWQ9dHJ1ZTtcclxuICBAT3V0cHV0KCkgZXhwYW5kZWRDaGFuZ2UgPSBuZXcgRXZlbnRFbWl0dGVyKCk7XHJcbiAgQElucHV0KCkgbGFiZWw6c3RyaW5nO1xyXG4gIGluaXRhbGl6ZWQ9ZmFsc2U7XHJcblxyXG4gIGNvbnN0cnVjdG9yKCkgeyB9XHJcbiAgbmdBZnRlclZpZXdJbml0KCk6IHZvaWQge1xyXG4gICAgUHJvbWlzZS5yZXNvbHZlKCkudGhlbigoKSA9PntcclxuICAgICAgLy8gdGhpcyBpcyBuZWNlc3NhcnkgdG8gcmVzb2x2ZSB0aGUgcHJvYmxlbSBvZiBmbGlja2luZyBvbiByZWxvYWRcclxuICAgICAgdGhpcy5pbml0YWxpemVkPXRydWU7XHJcblxyXG4gICAgfSk7XHJcbiAgfVxyXG5cclxuICBuZ09uSW5pdCgpOiB2b2lkIHtcclxuICB9XHJcblxyXG4gIHB1YmxpYyBzZXRMYWJlbChsYWJlbDpzdHJpbmcpe1xyXG4gICAgUHJvbWlzZS5yZXNvbHZlKCkudGhlbigoKSA9PnRoaXMubGFiZWw9bGFiZWwpO1xyXG4gIH1cclxuXHJcbiAgcHVibGljIHNldEV4cGFuZGVkKGV4cGFuZGVkOmJvb2xlYW4pe1xyXG4gICAgICBQcm9taXNlLnJlc29sdmUoKS50aGVuKCgpID0+dGhpcy5leHBhbmRlZD1leHBhbmRlZCk7XHJcbiAgfVxyXG5cclxuICBleHBDaGFuZ2UoZXYpe1xyXG4gICAgdGhpcy5leHBhbmRlZENoYW5nZS5uZXh0KGV2KVxyXG4gIH1cclxuXHJcblxyXG59XHJcbiIsIkBpZiAoaW5pdGFsaXplZCkge1xyXG4gIDxtYXQtZXhwYW5zaW9uLXBhbmVsIFtleHBhbmRlZF09XCJleHBhbmRlZFwiIChleHBhbmRlZENoYW5nZSk9XCJleHBDaGFuZ2UoJGV2ZW50KVwiPlxyXG4gICAgPG1hdC1leHBhbnNpb24tcGFuZWwtaGVhZGVyPlxyXG4gICAgICB7e2xhYmVsfX1cclxuICAgIDwvbWF0LWV4cGFuc2lvbi1wYW5lbC1oZWFkZXI+XHJcbiAgICA8bmctY29udGVudCBzZWxlY3Q9XCJzaWktZmFjZXQtc2VhcmNoXCI+PC9uZy1jb250ZW50PlxyXG4gICAgPGRpdiBjbGFzcz1cInNrZWxDb250XCI+XHJcbiAgICAgIDxuZy1jb250ZW50PjwvbmctY29udGVudD5cclxuICAgIDwvZGl2PlxyXG4gICAgPG5nLWNvbnRlbnQgc2VsZWN0PVwic2lpLWZhY2V0LXBhZ2luYXRvclwiPjwvbmctY29udGVudD5cclxuICA8L21hdC1leHBhbnNpb24tcGFuZWw+XHJcbn1cclxuIl19

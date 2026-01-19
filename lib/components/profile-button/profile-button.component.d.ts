@@ -1,0 +1,34 @@
+import { OnInit } from '@angular/core';
+import { SiiToolkitService } from '../../sii-toolkit.service';
+import { MyselfDTO } from '../../dto/myself.dto';
+import { SdacPreviewService } from '../dsii-components/sdac-preview/service/sdac-preview.service';
+import { SiiEngageService } from '../../service/sii-engage.service';
+import { Router } from '@angular/router';
+import { DelegationService } from '../dsii-components/delegation/delegation.service';
+import * as i0 from "@angular/core";
+export declare class ProfileButtonComponent implements OnInit {
+    siiToolkitService: SiiToolkitService;
+    delegationService: DelegationService;
+    private router;
+    private sdacPreviewService;
+    private engageService;
+    mySelf: MyselfDTO;
+    hideDetail: boolean;
+    get sdacTicketCount(): number;
+    get sdacNotificationCount(): number;
+    get corporateItCalendarEventsCount(): number;
+    photoURL: string;
+    constructor(siiToolkitService: SiiToolkitService, delegationService: DelegationService, router: Router, sdacPreviewService: SdacPreviewService, engageService: SiiEngageService);
+    ngOnInit(): void;
+    doLogout(): void;
+    doDelegation(): void;
+    doDelegationLogout(): void;
+    openSdacTiketsByCode(code?: any): void;
+    openSdacNotification(): void;
+    openSdacTicket(): void;
+    goToDeadlines(): void;
+    goToProfile(): void;
+    openUrlInWindow(url: string): void;
+    static ɵfac: i0.ɵɵFactoryDeclaration<ProfileButtonComponent, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<ProfileButtonComponent, "sii-profile-button", never, { "mySelf": { "alias": "mySelf"; "required": false; }; "hideDetail": { "alias": "hideDetail"; "required": false; }; }, {}, never, never, true, never>;
+}

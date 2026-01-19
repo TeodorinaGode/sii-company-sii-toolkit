@@ -1,0 +1,32 @@
+import { HttpClient } from '@angular/common/http';
+import { SiiToolkitService } from '../../../../sii-toolkit.service';
+import { BehaviorSubject } from 'rxjs';
+import { SiiMenuFolder } from '../dto/menu-folder';
+import { SiiMenuUserInfo, EngCompany } from '../dto/menu-user-Info.dto';
+import { SiiMenuVoice } from '../dto/menu-voice';
+import * as i0 from "@angular/core";
+export declare class GlobalMenuService {
+    private http;
+    siiToolkitService: SiiToolkitService;
+    favoriteVoice: BehaviorSubject<SiiMenuVoice[]>;
+    menu: BehaviorSubject<SiiMenuFolder[]>;
+    selectedCompany: BehaviorSubject<string>;
+    availableCompany: BehaviorSubject<EngCompany[]>;
+    menuUserInfo: SiiMenuUserInfo;
+    constructor(http: HttpClient, siiToolkitService: SiiToolkitService);
+    initMenu(): void;
+    private loadMenu;
+    private buildAvailableCompany;
+    private loadMenuUserInfo;
+    private enrichMenus;
+    private enrichMenu;
+    SelectCompany(company: string): void;
+    initSelectedCompany(): void;
+    saveFavorites(): void;
+    loadFavoriteVoices(): void;
+    addToFavorites(voice: SiiMenuVoice): void;
+    removeFromFavorites(voice: SiiMenuVoice, index: number): void;
+    isInFavorites(voice: SiiMenuVoice): boolean;
+    static ɵfac: i0.ɵɵFactoryDeclaration<GlobalMenuService, never>;
+    static ɵprov: i0.ɵɵInjectableDeclaration<GlobalMenuService>;
+}

@@ -1,0 +1,47 @@
+import { HttpClient } from '@angular/common/http';
+import { BehaviorSubject } from 'rxjs';
+import { SiiWaitService } from '../components/wait/sii-wait.service';
+import { SiiMenuFolder } from '../components/menu/global-menu/dto/menu-folder';
+import { EngageConfigDTO } from '../dto/engage-config.dto';
+import { SiiEnvironment } from '../dto/sii-environment.dto';
+import { SiiToolkitService } from '../sii-toolkit.service';
+import { OfficeEvent } from '../dto/OfficeCalendarEvents.dto';
+import * as i0 from "@angular/core";
+export declare class SiiEngageService {
+    private http;
+    private environment;
+    private toolkitServ;
+    private siiwait;
+    get isEngage(): boolean;
+    get loggedUserId(): string;
+    get languageId(): string;
+    currentMenu: BehaviorSubject<SiiMenuFolder[]>;
+    favoriteItems: BehaviorSubject<string[]>;
+    corporateCalendarEvents: BehaviorSubject<OfficeEvent[]>;
+    corporateCalendarEventsCount: number;
+    private engageConfig;
+    get engageBEDomain(): string;
+    get engageDomain(): string;
+    get engageAvailable(): boolean;
+    constructor(http: HttpClient, environment: SiiEnvironment, toolkitServ: SiiToolkitService, siiwait: SiiWaitService);
+    clearLocalstorage(): void;
+    getToolbarMenuVoices(): import("rxjs").Observable<{
+        menu: any[];
+    }>;
+    fetchEngageConfig(): () => Promise<any>;
+    findEngageConf(): EngageConfigDTO | null;
+    private endsBySlashP;
+    private resolveAfterUserResolve;
+    private getMenuVoices;
+    forceReloadMenu(): void;
+    private fetchMenu;
+    private preloadMenu;
+    fetchFavoritesVoices(): void;
+    preloadLocalFavoritesVoices(): void;
+    getMenuFavoriteVoices(): import("rxjs").Observable<string[]>;
+    saveFavoritesVoice(fav: string[]): import("rxjs").Observable<Object>;
+    loadEventsFromCorporateITCalendar(): void;
+    private buildCorporateItEventData;
+    static ɵfac: i0.ɵɵFactoryDeclaration<SiiEngageService, [null, { optional: true; }, null, null]>;
+    static ɵprov: i0.ɵɵInjectableDeclaration<SiiEngageService>;
+}
